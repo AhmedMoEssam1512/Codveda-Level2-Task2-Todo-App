@@ -1,0 +1,130 @@
+/* General Page Styles */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-header {
+    border-radius: 15px 15px 0 0 !important;
+    padding: 20px;
+}
+
+/* Task List Items */
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid #e9ecef;
+    padding: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+    transform: translateX(5px);
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* Completed Task Style */
+.completed {
+    text-decoration: line-through;
+    color: #6c757d;
+    background-color: #f8f9fa !important;
+}
+
+/* Task Text */
+.task-text {
+    flex-grow: 1;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* Action Buttons Container */
+.action-buttons {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+/* Make sure both buttons are visible */
+.btn-check,
+.btn-delete {
+    display: inline-block;
+    visibility: visible;
+    opacity: 1;
+    min-width: 40px;
+}
+
+/* Check button specific styles */
+.btn-check {
+    background-color: #28a745 !important;
+    color: white !important;
+    border: none !important;
+    padding: 8px 12px !important;
+}
+
+.btn-check:hover {
+    background-color: #218838 !important;
+    transform: scale(1.1);
+}
+
+/* Delete button specific styles */
+.btn-delete {
+    background-color: #dc3545 !important;
+    color: white !important;
+    border: none !important;
+    padding: 8px 12px !important;
+}
+
+.btn-delete:hover {
+    background-color: #c82333 !important;
+    transform: scale(1.1);
+}
+
+/* Input Field */
+#taskInput {
+    border-radius: 25px 0 0 25px;
+    padding: 10px 20px;
+    border: 2px solid #e9ecef;
+}
+
+#taskInput:focus {
+    box-shadow: none;
+    border-color: #667eea;
+}
+
+#addTaskBtn {
+    border-radius: 0 25px 25px 0;
+    padding: 10px 25px;
+}
+
+/* Empty State Message */
+.empty-state {
+    text-align: center;
+    color: #6c757d;
+    padding: 20px;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .task-text {
+        font-size: 1rem;
+    }
+}
